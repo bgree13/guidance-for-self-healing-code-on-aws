@@ -206,7 +206,6 @@ Resources:
       Timeout: 900
       Code: package/
       Handler: handlers/triage.handler
-      ReservedConcurrentExecutions: 10
       DeadLetterConfig:
         TargetArn: !GetAtt LambdaDlq.Arn
       KmsKeyArn: !GetAtt KmsKey.Arn
@@ -315,7 +314,6 @@ Resources:
       Timeout: 900
       Code: package/
       Handler: handlers/fix_code.handler
-      ReservedConcurrentExecutions: 10
       DeadLetterConfig:
         TargetArn: !GetAtt LambdaDlq.Arn
       KmsKeyArn: !GetAtt KmsKey.Arn
@@ -404,7 +402,6 @@ Resources:
       Timeout: 900
       Code: package/
       Handler: handlers/detect_error.handler
-      ReservedConcurrentExecutions: 10
       DeadLetterConfig:
         TargetArn: !GetAtt LambdaDlq.Arn
       KmsKeyArn: !GetAtt KmsKey.Arn
